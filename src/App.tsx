@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React ,{Fragment}from 'react';
 
-function App() {
+import './App.css';
+import Shorturl from './components/Shorturl/Shorturl';
+import Footer from './components/UI/Footer';
+import Nav from './components/UI/Nav';
+
+const App = ()  => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Fragment>  
+    <Nav/>
+    <div className='App'>
+      <Shorturl/>
     </div>
+    <Footer/>
+    </Fragment>
   );
 }
 
